@@ -1,0 +1,7 @@
+---
+# Customize the number of votes required to kick a player
+VoteCount: 7
+
+ # Permission cannot get kicked from players (protection)
+kickProtectionPerm: kick.protection.votekick
+...

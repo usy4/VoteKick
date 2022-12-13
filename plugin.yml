@@ -1,0 +1,10 @@
+name: VoteKick
+author: usy4
+api: 4.0.0
+version: 1.0.0
+main: usy4\VoteKick\Main
+descriptions: To vote to kick someone in a game for whatever reason such as hacking, rude, etc.
+
+permissions:
+  votekick.command:
+    default: true
