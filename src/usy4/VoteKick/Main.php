@@ -73,16 +73,16 @@ class Main extends PluginBase implements Listener{
                     if(!isset($this->VoteKickCount[$target->getName()])){
                         $this->VoteKickCount[$target->getName()] = 1;
                         $this->VoteKickCount[$target->getName().$player->getName()] = true;
-                        $this->getServer()->broadcastMessage($player->getName() . " §avoted on §r" . $target->getName() . " §ato kick him §r(" .  $this->VoteKickCount[$target->getName()] . "/" . $this->getConfig()->get("VoteCount", 8) . ")§a, §bReason: §r" . $d[1]);
+                        $this->getServer()->broadcastMessage($player->getName() . " §avoted on §r" . $target->getName() . " §ato kick him §r(" .  $this->VoteKickCount[$target->getName()] . "/" . $this->getConfig()->get("VoteCount", 7) . ")§a, §bReason: §r" . $d[1]);
                     } else if(!isset($this->VoteKickCount[$target->getName().$player->getName()])){
                         $this->VoteKickCount[$target->getName()]++;
-                        $this->getServer()->broadcastMessage($player->getName() . " §avoted on §r" . $target->getName() . " §ato kick him §r(" .  $this->VoteKickCount[$target->getName()] . "/" . $this->getConfig()->get("VoteCount", 8) . ")§a, §bReason: §r" . $d[1]);
+                        $this->getServer()->broadcastMessage($player->getName() . " §avoted on §r" . $target->getName() . " §ato kick him §r(" .  $this->VoteKickCount[$target->getName()] . "/" . $this->getConfig()->get("VoteCount", 7) . ")§a, §bReason: §r" . $d[1]);
                     } else {
                         $this->VoteKickCount[$target->getName()]--;
                         unset($this->VoteKickCount[$target->getName().$player->getName()]);
-                        $this->getServer()->broadcastMessage($player->getName() . " §acanceled the vote on §r" . $target->getName() . " §ato kick him §r(" .  $this->VoteKickCount[$target->getName()] . "/" . $this->getConfig()->get("VoteCount", 8) . ")§a, §bReason: §r" . $d[1]);
+                        $this->getServer()->broadcastMessage($player->getName() . " §acanceled the vote on §r" . $target->getName() . " §ato kick him §r(" .  $this->VoteKickCount[$target->getName()] . "/" . $this->getConfig()->get("VoteCount", 7) . ")§a, §bReason: §r" . $d[1]);
                     }
-                    if($this->VoteKickCount[$target->getName()] == $this->getConfig()->get("VoteCount", 8)){
+                    if($this->VoteKickCount[$target->getName()] == $this->getConfig()->get("VoteCount", 7)){
                         $this->getServer()->broadcastMessage($this->VoteKickCount[$target->getName()] . "§7 players have voted to kick §r" . $target->getName() . "§7 out");
                         $target->kick($this->VoteKickCount[$target->getName()] . "§7 players have voted to kick you out,\nReason: " . $d[1]);
                     }
