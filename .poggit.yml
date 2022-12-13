@@ -1,0 +1,12 @@
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/usy4/VoteKick
+build-by-default: true
+branches:
+- main
+projects:
+  VoteKick:
+    path: ""
+    icon: "VoteKick.png"
+    libs:
+      - src: Vecnavium/FormsUI/FormsUI
+        version: ^1.0.0
+...
