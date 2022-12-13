@@ -41,7 +41,7 @@ class Main extends PluginBase implements Listener{
         }
         $ol = $onlineList[$player->getName()];
         $olv = $onlineList[$player->getName()."with votes"];
-        $form = new CustomForm(function (Player $player, $data) use ($ol, $olv){
+        $form = new CustomForm(function (Player $player, $data) use ($ol){
             if($data === null) {
                 return true;
             }
